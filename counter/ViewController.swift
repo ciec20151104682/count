@@ -29,8 +29,7 @@ class ViewController: UIViewController {
             //scoretwo.text=("\(twoscore)");
             one.text=("\(sone)");
             two.text=("\(stwo)");
-        }else
-        {print("wrong!");}
+        }
     }
     @IBAction func twoup(_ sender: Any) {
         stwo=stwo+1;
@@ -43,8 +42,7 @@ class ViewController: UIViewController {
             scoretwo.text=("\(twoscore)");
             one.text=("\(sone)");
             two.text=("\(stwo)");
-        }else
-        {print("wrong!");}
+        }
     }
     @IBAction func changeplace(_ sender: UIButton) {
     onescore=Int(scoreone.text!)!;
@@ -54,7 +52,7 @@ class ViewController: UIViewController {
         twoscore=score;
     scoreone.text=("\(onescore)");
      scoretwo.text=("\(twoscore)");
-        
+       
     }
      override func viewDidLoad() {
         super.viewDidLoad()
