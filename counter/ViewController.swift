@@ -7,8 +7,10 @@
 //
 
 import UIKit
+class ViewController: UIViewController,
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate{
 
-class ViewController: UIViewController {
    @IBOutlet weak var scoretwo: UILabel!
    @IBOutlet weak var scoreone: UILabel!
    @IBOutlet weak var one: UILabel!
@@ -18,6 +20,26 @@ class ViewController: UIViewController {
     var onescore:Int=0
     var twoscore:Int=0
     var score:Int=0
+    var dlg:Int=0
+    var flag1:Int=0
+    var flag2:Int=0
+    @IBAction func p1(_ sender: Any) {
+        if (dlg==0) {
+            flag1=1
+            flag2=0
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let picker = UIImagePickerController()
+                picker.delegate=self
+                picker.sourceType=UIImagePickerControllerSourceType.photoLibrary
+                self.present(picker,animated: true,completion:{
+                    ()->Void in
+                })
+                
+            }else{
+                print("错误!")
+            }
+        }
+    }
     @IBAction func oneup(_ sender: Any) {
         sone=sone+1;
         one.text=("\(sone)");
