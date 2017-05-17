@@ -80,7 +80,7 @@
                                 <rect key="frame" x="96" y="28" width="185" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-1w-fW4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-1w-fW4">
                                 <rect key="frame" x="125" y="57" width="41" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -92,30 +92,32 @@
                                     <action selector="changeplace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HeR-HQ-7pR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kug-Ct-g3r">
-                                <rect key="frame" x="211" y="135" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="上传图片"/>
-                                <connections>
-                                    <action selector="p1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOv-iU-OTL"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-LR-WdN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-LR-WdN">
                                 <rect key="frame" x="214" y="57" width="41" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-OS-U4X">
-                                <rect key="frame" x="102" y="135" width="63" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xB-Ea-171">
+                                <rect key="frame" x="122" y="135" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="上传图片"/>
+                                <state key="normal" title="join"/>
                                 <connections>
-                                    <action selector="p1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r6W-aE-MF1"/>
+                                    <action selector="photo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wee-Ul-PHK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijm-T3-mLb">
+                                <rect key="frame" x="209" y="137" width="50" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="join"/>
+                                <connections>
+                                    <action selector="photo1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHz-aa-w24"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99835759401321411" green="0.85811455951476356" blue="0.59160999055793762" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="bodyone" destination="UKM-1w-fW4" id="FtL-NB-4pC"/>
+                        <outlet property="bodytwo" destination="CKy-LR-WdN" id="yaW-2O-ngK"/>
                         <outlet property="one" destination="paP-bQ-rRy" id="cMt-0K-FeB"/>
                         <outlet property="scoreone" destination="gap-f5-AwZ" id="s2b-XA-iNm"/>
                         <outlet property="scoretwo" destination="QdH-2i-3ae" id="xkF-Ya-a9e"/>
@@ -128,7 +130,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="17" height="17"/>
         <image name="jh" width="23" height="19"/>
+        <image name="second" width="10" height="12"/>
         <image name="乒乓球副本" width="322" height="168"/>
     </resources>
 </document>
