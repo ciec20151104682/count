@@ -100,6 +100,28 @@ class ViewController: UIViewController,
             //scoretwo.text=("\(twoscore)");
             one.text=("\(sone)");
             two.text=("\(stwo)");
+        
+        }
+        if(onescore == 3){
+            let alertVC = UIAlertController(title: "提示", message: "A胜！！！", preferredStyle: UIAlertControllerStyle.alert)
+            sone=0;
+            stwo=0;
+            onescore=0;
+            twoscore=0;
+            scoreone.text=("\(onescore)");
+            scoretwo.text=("\(twoscore)");
+            one.text=("\(sone)");
+            two.text=("\(stwo)");
+            let acSure = UIAlertAction(title: "确定", style: UIAlertActionStyle.destructive) { (UIAlertAction) -> Void in
+                print("click Sure")
+            }
+            let acCancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel) {
+                (UIAlertAction) -> Void in
+                print("click Cancel")
+            }
+            alertVC.addAction(acSure)
+            alertVC.addAction(acCancel)
+            self.present(alertVC, animated: true, completion: nil)
         }
     }
     @IBAction func twoup(_ sender: Any)
@@ -115,6 +137,27 @@ class ViewController: UIViewController,
             scoretwo.text=("\(twoscore)");
             one.text=("\(sone)");
             two.text=("\(stwo)");
+        }
+        if(twoscore == 3){
+            let alertVC = UIAlertController(title: "提示", message: "B胜！！！", preferredStyle: UIAlertControllerStyle.alert)
+            sone=0;
+            stwo=0;
+            onescore=0;
+            twoscore=0;
+            scoreone.text=("\(onescore)");
+            scoretwo.text=("\(twoscore)");
+            one.text=("\(sone)");
+            two.text=("\(stwo)");
+            let acSure = UIAlertAction(title: "确定", style: UIAlertActionStyle.destructive) { (UIAlertAction) -> Void in
+                print("click Sure")
+            }
+            let acCancel = UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel) {
+                (UIAlertAction) -> Void in
+                print("click Cancel")
+            }
+            alertVC.addAction(acSure)
+            alertVC.addAction(acCancel)
+            self.present(alertVC, animated: true, completion: nil)
         }
     }
     @IBAction func changeplace(_ sender: UIButton)
